@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Someone Special 💖</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0;
+      margin-top: 100px;
+    }
+    h1 {
+      color: #ff4d6d;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+    #noBtn {
+      background-color: white;
+      color: #ff4d6d;
+      border: 2px solid #ff4d6d;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hey Love ❤️</h1>
+  <h2>Will you be my Valentine? 💕</h2>
+
+  <button id="yesBtn" onclick="sayYes()">Yes 💖</button>
+  <button id="noBtn" onmouseover="moveButton()">No 🙈</button>
+
+  <script>
+    function sayYes() {
+      document.body.innerHTML = `
+        <h1>Yayyyy!!! 😍💖</h1>
+        <h2>You just made me the happiest person alive! ❤️</h2>
+      `;
+    }
+
+    function moveButton() {
+      const button = document.getElementById("noBtn");
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
